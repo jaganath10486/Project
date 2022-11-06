@@ -1,19 +1,12 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import styles from '../Styles/TaskList.module.css';
 import List from './List';
+import { AppContext } from '../Context/ContextApi';
 
 function TaskList()
 {
-    const data = [{
-        task : 'Hello World',
-        time : '2:00 PM',
-        date : 'Fri, 21 May 22',
-        Assigned_By : 'Manohar Pathnaik',
-        Assigned_To : 'Arvind',
-        Deadline : 'Fri, 21 May 22',
-        status : 'green',
-        Priority : 'High',
-    }];
+    const { data } = useContext(AppContext);
+
     return(
         <div className={styles.List}>
             <table>
