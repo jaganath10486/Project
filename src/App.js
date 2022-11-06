@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       <div className={styles.total_nav}>
         <div className={styles.top}>
-        <Appprovider value={{todos : todos}}>
+        <Appprovider value={{data : todos}}>
           <Navbar/>
           <Summary/>
           <Tasks/>
