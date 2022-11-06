@@ -9,7 +9,7 @@ function Sidebar(props)
             <nav class="nav__content">
 
                 <a href="#" class="nav__logo">
-                    <span class="nav__logo-name">Healthy</span>
+                    <span class="nav__logo-name">HR</span>
                 </a>
 
                 <div class="nav__list" id="top__list">

@@ -1,12 +1,11 @@
 import React from "react";
-// import Dot from './Dot';
-
+import styles from '../Styles/List.module.css'
 function List(props)
 {
     const colors = ['bg-secondary', 'bg-success', 'bg-primary'];
     return(
         <React.Fragment>
-            <tr>
+            <tr className = {styles.list}>
                 <td>{props.list.task}</td>
                 <td>{props.list.time}</td>
                 <td>{props.list.date}</td>
