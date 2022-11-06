@@ -1,12 +1,10 @@
 import React, {useContext, useState} from "react";
 import styles from '../Styles/TaskList.module.css';
 import List from './List';
-import { AppContext } from '../Context/ContextApi';
 
-function TaskList()
+function TaskList({ data })
 {
-    const { data } = useContext(AppContext);
-
+    
     return(
         <div className={styles.List}>
             <table>

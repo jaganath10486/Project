@@ -2,13 +2,20 @@ import React, {useState, useReducer, useContext} from 'react';
 import styles from '../Styles/Tasks.module.css';
 import Tabs from './Tabs';
 import TasksList from './TasksList';
+import { AppContext } from '../Context/ContextApi';
 
 function Task()
 {
     const [state1, setState1] = useState(1);
     const [state2, setState2] = useState(0);
     const [search, setSearch] = useState('');
-    // console.log(state)
+    
+    const { data } = useContext(AppContext);
+    
+    const DynamicSearch = () => {
+        return data.filter(item => item.task.toLowerCase().includes(search.toLowerCase()));
+    }
+
     return(
         <div className={styles.Tasks}>
             <div className={styles.content}>
@@ -26,10 +33,10 @@ function Task()
                     </div>
                 </div>
                 <div className={styles.middle}>
-                 <input class="form-control me-2" type="search" placeholder="Search Todos " aria-label="Search"></input>
+                 <input class="form-control me-2" type="search" placeholder="Search Todos " aria-label="Search" value={search} onChange={(event) => {setSearch(event.target.value)}}></input>
                 </div>
                 <div className={styles.bottom}>
-                    <TasksList/>
+                    <TasksList data = {DynamicSearch()}/>
                 </div>
             </div>
         </div>
