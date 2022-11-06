@@ -1,8 +1,6 @@
 .summary
 {
-    position: relative;
-    top: 6rem;
-    width: 60%;
+    width: 70%;
     margin-left: 13px;
     box-shadow: 1px 0 4px hsla(228, 81%, 49%, .15);
     background-color: #fff;
@@ -41,3 +39,13 @@
     padding: 7px;
     padding-top: 0px;
 }
+
+.whole
+{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    position: relative;
+    top: 6rem;
+}
+
